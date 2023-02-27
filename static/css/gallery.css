@@ -1,0 +1,109 @@
+/* SECTION GALLERY */
+
+.gallary{
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.heading h3{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+  color: #000;
+  padding-bottom: 48px;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 'item1 item1 item2 item3'
+                       'item4 item4 item7 item5'
+                       'item4 item4 item8 item6';
+  grid-gap: 10px;
+}
+.item {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 12rem;
+  cursor: pointer;
+  background: red;
+  border-radius: 4px;
+}
+.item1 {
+  grid-area: item1;
+  background: #666 url("./gallary/1.jpg");
+  background-position: top !important; 
+}
+.item2 {
+  grid-area: item2;
+  background: #666 url("./gallary/2.jpg"); 
+}
+.item3 {
+  grid-area: item3;
+  background: #666 url("./gallary/3.jpg"); 
+}
+.item4 {
+  grid-area: item4;
+  background: #666 url("./gallary/4.jpg"); 
+}
+.item5 {
+  grid-area: item5;
+  background: #666 url("./gallary/5.jpg");
+}
+.item6 {
+  grid-area: item6;
+  background: #666 url("./gallary/6.jpg");
+}
+.item7 {
+  grid-area: item7;
+  background: #666 url("./gallary/7.jpg");
+}
+.item8 {
+  grid-area: item8;
+  background: #666 url("./gallary/8.jpg");
+}
+
+@media (max-width: 768px) {
+  .grid-gallery { 
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "item1 item1 item2"
+                           "item3 item4 item2"
+                           "item5 item6 item2";
+  }
+}
+@media (max-width: 620px) {
+  .grid-gallery { 
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "item1 item3"
+                           "item2 item4"
+                           "item2 item5" 
+                           "item2 item6";
+  }
+}
+@media (max-width: 360px) {
+  .grid-gallery { 
+      grid-template-columns: 1fr;
+      grid-template-areas: "item1"
+                           "item2"
+                           "item3" 
+                           "item4"
+                           "item5"
+                           "item6"
+                           "item7"
+                           "item8";
+  }
+  .item2 {
+      background-position: top;
+  }
+}

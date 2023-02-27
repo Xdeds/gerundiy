@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="gallary">
+        <div class="container">
+            <div class="gallary__item">
+                <div class="row-outer">
+                    <div class="heading">
+                        <h3>Наша галерея</h3>
+                    </div>
+                    <div class="grid-gallery">
+                        {% for i in gallery %}
+                        <img class="mentorImg" src="{{i.img.url}}" alt="">
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+      <div id="student" class="mentor">
+        <div class="container">
+          <div class="title mentor__title">
+            <h3 style="color: black;">Знакомьтесь, наши Ученики</h3>
+          </div>
+          <div class="mentor__cards">
+            {% for i in student %}
+              <div class="mentor__card">
+                <img class="mentorImg" src="{{i.image.url}}" alt="" style="height: 300px;">
+                <div class="mentorCard__title">
+                  <h6>{{i.name}} <span>{{i.category}}</span></h6>
+                  <div class="mentorCard__info">
+                    <div class="card__icons">
+                      <div class="icon">
+                        <!-- <img src="./assets/image/mentor/11.png" alt=""> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      </section>
+      <section>
+        <div id="mentor" class="mentor">
+          <div class="container">
+            <div class="title mentor__title">
+              <h3 style="color: black;">Знакомьтесь, наши Учителя</h3>
+            </div>
+            <div class="mentor__cards">
+              {% for i in teacher %}
+                <div class="mentor__card">
+                  <img class="mentorImg" src="{{i.image.url}}" alt="" style="height: 300px;">
+                  <div class="mentorCard__title">
+                    <h6>{{i.name}} <span>{{i.category}}</span></h6>
+                    <div class="mentorCard__info">
+                      <div class="card__icons">
+                        <div class="icon">
+                          <!-- <img src="./assets/image/mentor/11.png" alt=""> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        </section>
+        <section>
+          <div id="graduate" class="mentor">
+            <div class="container">
+              <div class="title mentor__title">
+                <h3 style="color: black;">Знакомьтесь, наши Выпускники</h3>
+              </div>
+              <div class="mentor__cards">
+                {% for i in graduate %}
+                  <div class="mentor__card">
+                    <img class="mentorImg" src="{{i.image.url}}" alt="" style="height: 300px;">
+                    <div class="mentorCard__title">
+                      <h6>{{i.name}} <span>{{i.category}}</span></h6>
+                      <div class="mentorCard__info">
+                        <div class="card__icons">
+                          <div class="icon">
+                            <!-- <img src="./assets/image/mentor/11.png" alt=""> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          </section>
+
+{% endblock %}
